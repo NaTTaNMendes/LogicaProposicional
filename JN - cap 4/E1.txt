@@ -1,0 +1,39 @@
+Demonstre, utilizando qualquer um dos métodos estudados neste capítulo, que as fórmulas a seguir são tautologias
+
+1)
+
+(¬(¬H))<->H
+
+(¬(¬H))<->H é tautologia
+    <=> ∀I, I[(¬(¬H))] = I[H]
+    <=> ∀I, I[¬H] ≠ I[H]
+        <=> ∃I, I[¬H] = T e I[H] = F
+            =>  ∃I, I[¬(¬H)] = F e I[H] = F
+            <=> ∃I, I[¬(¬H)] = I[H]
+        <=> ∃I, I[¬H] = F e I[H] = T
+            =>  ∃I, I[¬(¬H)] = T e I[H] = T
+            <=> ∃I, I[¬(¬H)] = I[H]
+    
+    Dessa forma, (¬(¬H))<->H é tautologia
+
+¬(H->G)<->(H^(¬G))
+
+¬(H->G)<->(H^(¬G)) é tautologia
+    <=> ∀I, I[¬(H->G)] = I[H^(¬G)]
+    <=> ∀I, I[H->G] ≠ I[H^(¬G)]
+        <=> ∃I, I[H->G] = F
+            =>  ∃I, I[H] = T e I[G] = F
+                =>  ∃I, I[H^(¬G)] = T
+                OK
+        <=> ∃I, I[H->G] = T
+            =>  ∃I, I[H] = T e I[G] = T
+                =>  ∃I, I[H^(¬G)] = F
+                OK
+            =>  ∃I, I[H] = F e I[G] = F
+                =>  ∃I, I[H^(¬G)] = F
+                OK
+            =>  ∃I, I[H] = F e I[G] = T
+                =>  ∃I, I[H^(¬G)] = F
+                OK
+    Dessa forma, ¬(H->G)<->(H^(¬G)) é tautologia
+
